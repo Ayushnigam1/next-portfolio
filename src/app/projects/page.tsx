@@ -7,8 +7,8 @@ export default async function Projects() {
   const projects = await getProjects();
   return <Stack>
     <Typography
-      fontSize={{ xs: 56, md: 64 }}
-      marginTop={22}
+      fontSize={{ xs: 40, sm: 52, md: 64 }}
+      marginTop={{xs:16,md:14}}
       marginBottom={11}
       fontFamily="Rampart One"
     >Projects</Typography>

@@ -19,7 +19,7 @@ export default function RootLayout({
       <body>
       <NavMenu/>
           <NavBar />
-          <Container sx={{ margin: { md: "0 64px"}, width: { md: '-webkit-fill-available' }, marginTop: { md: '64px' }, height:'-webkit-fill-available'  }}>{children}</Container>
+          <Container sx={{ margin: { md: "0 64px"}, width: { md: '-webkit-fill-available' }, paddingTop: {md: '64px' }, height:'-webkit-fill-available'  }}>{children}</Container>
       </body>
     </html>
   );

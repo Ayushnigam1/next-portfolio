@@ -1,131 +1,249 @@
-"use client"
-import { Sheet, Stack, Typography, useTheme } from "@mui/joy"
-import {Instagram} from '@mui/icons-material'
-import {  FaUpwork } from "react-icons/fa6";
+"use client";
+import { Sheet, Stack, Typography, styled, useTheme } from "@mui/joy";
+import { Instagram } from "@mui/icons-material";
+import { FaUpwork } from "react-icons/fa6";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
-import { SiLeetcode,SiGeeksforgeeks,SiGmail,SiCodingninjas  } from 'react-icons/si';
+import {
+  SiLeetcode,
+  SiGeeksforgeeks,
+  SiGmail,
+  SiCodingninjas,
+} from "react-icons/si";
 
+const Icon = styled("div")(({ theme }) => ({
+  fontSize: "50px",
+  transition: "font-size 0.2s ease-in-out",
+  "&:hover": {
+    fontSize: "52px",
+  },
+}));
 export default function Contacts() {
-    const theme =useTheme()
- return (
-    <Stack  alignItems={"center"} direction={"row"} textAlign={"center"} height={'100%'}>
-    <Typography
-      fontSize={{ xs: 36, sm: 52, md: 64 }}
-      
-     sx={{ position: "relative",
-        marginLeft:"15%",
-        marginRight:"10%",
-        "&:not(:last-child)::after": {
-          content: '""',
-          position: "absolute",
-          right: "-25px", // Adjust based on your spacing needs
-          top:"-35px",
-          transform: "translateX(-50%)",
-          width: "2px",
-          height: "200%", // Adjust height as needed
-          backgroundColor: "#7A3E3E", // Divider color
-        }
-    }}
-      fontFamily="Rampart One"
-    >Connect Me</Typography>
-    <Stack direction={"row"} gap={5}>
-        <Stack gap={3}>
-        <Sheet variant="soft" sx={{
-            boxShadow:theme.shadow['xs'],
-            textAlign:"center",
-            transition: 'box-shadow 0.2s ease-in-out', 
-            '&:hover': {
-                boxShadow: theme => theme.shadow['md'], 
-            },}}>   
-        <a href="https://www.instagram.com/its_ayush_nigam_?igsh=dXN1dW96MHBoNDBs" target="_blank" rel="noopener noreferrer">
-        <Instagram  sx={{ color: '#7A3E3E',fontSize: 50, transition: 'font-size 0.2s ease-in-out',  '&:hover':{fontSize:52}  }} />
-      </a>
-      </Sheet>
-      <Sheet variant="soft" sx={{
-            boxShadow:theme.shadow['xs'],
-            textAlign:"center",
-            transition: 'box-shadow 0.2s ease-in-out', 
-            '&:hover': {
-                boxShadow: theme => theme.shadow['md'], 
-            },}}>  
-      
-      <a href="https://www.linkedin.com/in/ayush-nigam-269aa4220" target="_blank" rel="noopener noreferrer">
-       <AiOutlineLinkedin size={50} color="#7A3E3E" />
-       </a>
-       </Sheet>
-       <Sheet variant="soft" sx={{
-            boxShadow:theme.shadow['xs'],
-            textAlign:"center",
-            transition: 'box-shadow 0.2s ease-in-out', 
-            '&:hover': {
-                boxShadow: theme => theme.shadow['md'], 
-            },}}> 
-       <a href="https://github.com/Ayushnigam1" target="_blank" rel="noopener noreferrer">
-        <FaGithub size={50} color="#7A3E3E"/>
-        </a>
-        </Sheet>
-        <Sheet variant="soft" sx={{
-            boxShadow:theme.shadow['xs'],
-            textAlign:"center",
-            transition: 'box-shadow 0.2s ease-in-out', 
-            '&:hover': {
-                boxShadow: theme => theme.shadow['md'], 
-            },}}> 
-        <a href="mailto:ayush27nigam02@gmail.com" target="_blank" rel="noopener noreferrer">
-        <SiGmail size={50} color="#7A3E3E"/>
-        </a>
-        </Sheet>
+  const theme = useTheme();
+
+  return (
+    <Stack
+      alignItems={"center"}
+      direction={"row"}
+      textAlign={"center"}
+      height={{ md: "100%" }}
+      sx={{
+        flexDirection: {
+          xs: "column",
+          md: "row",
+        },
+        paddingTop: { xs: "50%", md: "0px" },
+      }}
+    >
+      <Typography
+        fontSize={{ xs: 36, sm: 52, md: 64 }}
+        sx={{
+          position: "relative",
+          marginLeft: "15%",
+          marginRight: "10%",
+          "&:not(:last-child)::after": {
+            content: '""',
+            position: "absolute",
+            right: { xs: "50%", md: "-25px" },
+            top: { xs: "10px", md: "-35px" },
+            transform: { xs: "rotate(90deg) scale(2)", md: "translateX(-50%)" },
+            width: "1px",
+            height: "200%",
+            backgroundColor: "#7A3E3E",
+          },
+        }}
+        fontFamily="Rampart One"
+      >
+        Connect Me
+      </Typography>
+      <Stack
+        direction={{ xs: "column", md: "row" }}
+        gap={5}
+        sx={{
+          marginTop: { xs: "10%", md: "10px" },
+          marginLeft: { xs: "20px", md: "0" },
+        }}
+      >
+        <Stack gap={3} direction={{ xs: "row", md: "column" }}>
+          <Sheet
+            color="primary"
+            variant="soft"
+            sx={{
+              boxShadow: theme.shadow["xs"],
+              padding: "5px",
+              textAlign: "center",
+              transition: "box-shadow 0.2s ease-in-out",
+              "&:hover": {
+                boxShadow: (theme) => theme.shadow["md"],
+              },
+            }}
+          >
+            <a
+              href="https://www.instagram.com/its_ayush_nigam_?igsh=dXN1dW96MHBoNDBs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram
+                sx={{
+                  color: "#7A3E3E",
+                  fontSize: 50,
+                  transition: "font-size 0.2s ease-in-out",
+                  "&:hover": { fontSize: 52 },
+                }}
+              />
+            </a>
+          </Sheet>
+          <Sheet
+            color="primary"
+            variant="soft"
+            sx={{
+              boxShadow: theme.shadow["xs"],
+              padding: "5px",
+              textAlign: "center",
+              transition: "box-shadow 0.2s ease-in-out",
+              "&:hover": {
+                boxShadow: (theme) => theme.shadow["md"],
+              },
+            }}
+          >
+            <a
+              href="https://www.linkedin.com/in/ayush-nigam-269aa4220"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon as={AiOutlineLinkedin} color="#7A3E3E" />
+            </a>
+          </Sheet>
+          <Sheet
+            color="primary"
+            variant="soft"
+            sx={{
+              boxShadow: theme.shadow["xs"],
+              padding: "5px",
+              textAlign: "center",
+              transition: "box-shadow 0.2s ease-in-out",
+              "&:hover": {
+                boxShadow: (theme) => theme.shadow["md"],
+              },
+            }}
+          >
+            <a
+              href="https://github.com/Ayushnigam1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon as={FaGithub} color="#7A3E3E" />
+            </a>
+          </Sheet>
+          <Sheet
+            color="primary"
+            variant="soft"
+            sx={{
+              boxShadow: theme.shadow["xs"],
+              padding: "5px",
+              textAlign: "center",
+              transition: "box-shadow 0.2s ease-in-out",
+              "&:hover": {
+                boxShadow: (theme) => theme.shadow["md"],
+              },
+            }}
+          >
+            <a
+              href="mailto:ayush27nigam02@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon as={SiGmail} color="#7A3E3E" />
+            </a>
+          </Sheet>
         </Stack>
-        <Stack gap={3}>
-        <Sheet variant="soft" sx={{
-            boxShadow:theme.shadow['xs'],
-            textAlign:"center",
-            transition: 'box-shadow 0.2s ease-in-out', 
-            '&:hover': {
-                boxShadow: theme => theme.shadow['md'], 
-            },}}> 
-        <a href="https://www.upwork.com/freelancers/~01fb2b36856406c51c" target="_blank" rel="noopener noreferrer">
-        <FaUpwork size={50} color="#7A3E3E"/>
-        </a>
-        </Sheet>
-        <Sheet variant="soft" sx={{
-            boxShadow:theme.shadow['xs'],
-            textAlign:"center",
-            transition: 'box-shadow 0.2s ease-in-out', 
-            '&:hover': {
-                boxShadow: theme => theme.shadow['md'], 
-            },}}> 
-        <a href="https://leetcode.com/u/ayush_nigam_1/" target="_blank" rel="noopener noreferrer">
-        <SiLeetcode size={50} color="#7A3E3E"/>
-        </a>
-        </Sheet>
-        <Sheet variant="soft" sx={{
-            boxShadow:theme.shadow['xs'],
-            textAlign:"center",
-            transition: 'box-shadow 0.2s ease-in-out', 
-            '&:hover': {
-                boxShadow: theme => theme.shadow['md'], 
-            },}}> 
-        <a href="https://www.geeksforgeeks.org/user/ayush27nigam02/" target="_blank" rel="noopener noreferrer">
-        <SiGeeksforgeeks size={50} color="#7A3E3E"/>
-        </a>
-        </Sheet>
-        <Sheet variant="soft" sx={{
-            boxShadow:theme.shadow['xs'],
-            textAlign:"center",
-            transition: 'box-shadow 0.2s ease-in-out', 
-            '&:hover': {
-                boxShadow: theme => theme.shadow['md'], 
-            },}}> 
-        <a href="https://www.naukri.com/code360/profile/Ayush_01" target="_blank" rel="noopener noreferrer">
-        <SiCodingninjas size={50} color="#7A3E3E"/>
-        </a>
-        </Sheet>
+        <Stack gap={3} direction={{ xs: "row", md: "column" }}>
+          <Sheet
+            color="primary"
+            variant="soft"
+            sx={{
+              boxShadow: theme.shadow["xs"],
+              padding: "5px",
+              textAlign: "center",
+              transition: "box-shadow 0.2s ease-in-out",
+              "&:hover": {
+                boxShadow: (theme) => theme.shadow["md"],
+              },
+            }}
+          >
+            <a
+              href="https://www.upwork.com/freelancers/~01fb2b36856406c51c"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon as={FaUpwork} color="#7A3E3E" />
+            </a>
+          </Sheet>
+          <Sheet
+            color="primary"
+            variant="soft"
+            sx={{
+              boxShadow: theme.shadow["xs"],
+              padding: "5px",
+              textAlign: "center",
+              transition: "box-shadow 0.2s ease-in-out",
+              "&:hover": {
+                boxShadow: (theme) => theme.shadow["md"],
+              },
+            }}
+          >
+            <a
+              href="https://leetcode.com/u/ayush_nigam_1/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon as={SiLeetcode} color="#7A3E3E" />
+            </a>
+          </Sheet>
+          <Sheet
+            color="primary"
+            variant="soft"
+            sx={{
+              boxShadow: theme.shadow["xs"],
+              padding: "5px",
+              textAlign: "center",
+              transition: "box-shadow 0.2s ease-in-out",
+              "&:hover": {
+                boxShadow: (theme) => theme.shadow["md"],
+              },
+            }}
+          >
+            <a
+              href="https://www.geeksforgeeks.org/user/ayush27nigam02/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon as={SiGeeksforgeeks} color="#7A3E3E" />
+            </a>
+          </Sheet>
+          <Sheet
+            color="primary"
+            variant="soft"
+            sx={{
+              boxShadow: theme.shadow["xs"],
+              padding: "5px",
+              textAlign: "center",
+              transition: "box-shadow 0.2s ease-in-out",
+              "&:hover": {
+                boxShadow: (theme) => theme.shadow["md"],
+              },
+            }}
+          >
+            <a
+              href="https://www.naukri.com/code360/profile/Ayush_01"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon as={SiCodingninjas} color="#7A3E3E" />
+            </a>
+          </Sheet>
         </Stack>
-         
-        
+      </Stack>
     </Stack>
-  </Stack>
- )
+  );
 }

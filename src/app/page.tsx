@@ -4,7 +4,7 @@ import { skills } from "@/skills";
 export default function Home() {
   return (
     <>
-      <Container component="section" sx={{ paddingTop: 10, paddingBottom: 10 }}>
+      <Container component="section" sx={{ paddingTop: {xs:16,md:10}, paddingBottom: 10 }}>
         <Stack position="relative">
           <Typography
             display={"inline"}

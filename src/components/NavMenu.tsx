@@ -32,10 +32,10 @@ function NavMenu() {
                                 </Stack>
                             </ListItemContent>
                         </ListItem>
-                        {routes.map((item) => {
+                        {routes.map((item,index) => {
                             const NavItemLink = item.type === 'route' ? NavLink : Link;
                             return (
-                                <ListItem key={item.title}>
+                                <ListItem key={index}>
                                     <ListItemButton
                                         onClick={() => setOpen(o => !o)}
                                         selected={pathname.includes(item.route)}

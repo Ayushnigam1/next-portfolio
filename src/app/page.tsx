@@ -1,6 +1,7 @@
 "use client"
 import { Card, Chip, Container, Stack, Typography } from "@mui/joy";
 import { skills } from "@/skills";
+import { wrap } from "module";
 export default function Home() {
   return (
     <>
@@ -29,12 +30,12 @@ export default function Home() {
           >
             Skills
           </Typography> */}
-          <Stack>
+          <Stack height={220} width={{xs:300,md:400}} flexWrap={"wrap"}>
         {
-          skills.map(skill=>{
+          skills.map((skill,index)=>{
             return (
-            <Chip sx={{
-              "--Chip-minHeight": "40px","--Chip-radius": "5px","--Chip-gap": "5px", margin:"2px","--Chip-minWidth": "40px"
+            <Chip key={index} sx={{
+              "--Chip-minHeight": "40px","--Chip-radius": "5px","--Chip-gap": "5px", margin:"2px",minWidth: {xs:"80px",md:"100px"}
 
             }} variant="outlined">{skill.name}</Chip>
             )

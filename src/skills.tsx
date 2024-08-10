@@ -5,5 +5,9 @@ export const skills:any[]=[
     {name:"NextJs"},
     {name:"GraphQL"},
     {name:"SpringBoot"},
+    {name:"Express"},
+    {name:"MongoDB"},
+    {name:"Postgres"},
+    {name:"Django"}
 
 ]

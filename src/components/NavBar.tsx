@@ -55,7 +55,7 @@ function NavBar() {
           const NavItemLink = item.type === 'route' ? NavLink : Link;
           return (
             <>
-            <ListItem sx={{ "--ListItem-paddingY": "1rem" }} key={item.title}>
+            <ListItem sx={{ "--ListItem-paddingY": "1rem" }} key={index}>
               <ListItemButton
                 selected={pathname.includes(item.route)}
               >

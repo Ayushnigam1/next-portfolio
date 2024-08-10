@@ -45,7 +45,7 @@ function NavMenu() {
                                                 sx={(theme) => ({
                                                     textDecoration: 'none',
                                                     ...theme.typography['body-lg'],
-                                                    fontFamily: (theme) => theme.fontFamily.display,
+                                                    fontFamily: "Open Sans",
                                                     lineHeight: 3
                                                 })}
                                             >

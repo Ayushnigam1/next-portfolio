@@ -1,7 +1,6 @@
 import { Project } from "@/types/Projects";
 // import { ArrowTopRightOnSquareIcon } from "@heroicons/react/16/solid";
 import { Card, CardActions, CardContent, CardCover, Chip, IconButton, Stack, Typography, useTheme } from "@mui/joy";
-import Image from "next/image";
 import Link from "next/link";
 
 interface ProjectCardProps {
@@ -10,10 +9,10 @@ interface ProjectCardProps {
 function ProjectCard(props: ProjectCardProps) {
   const { project } = props
   const theme = useTheme()
-  return <Card sx={{ padding: 0, gap: 0, height: '100%', zIndex:"-1" }} key={project.url}>
+  return <Card sx={{ padding: 0, gap: 0, height: '100%', zIndex:"-1" }} variant="outlined" key={project.url}>
     <CardContent sx={{ minHeight: 250, position: 'relative' }}>
       <CardCover>
-        <Image src={project.imageUrl} alt={project.name} />
+        <img src={project.imageUrl} />
       </CardCover>
     </CardContent>
     <CardActions sx={{ padding: 2 }}>

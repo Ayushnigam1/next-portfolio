@@ -1,5 +1,5 @@
 import { Project } from "@/types/Projects";
-// import { ArrowTopRightOnSquareIcon } from "@heroicons/react/16/solid";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/16/solid";
 import { Card, CardActions, CardContent, CardCover, Chip, IconButton, Stack, Typography, useTheme } from "@mui/joy";
 import Link from "next/link";
 
@@ -9,7 +9,7 @@ interface ProjectCardProps {
 function ProjectCard(props: ProjectCardProps) {
   const { project } = props
   const theme = useTheme()
-  return <Card sx={{ padding: 0, gap: 0, height: '100%', zIndex:"-1" }} variant="outlined" key={project.url}>
+  return <Card sx={{ padding: 0, gap: 0, height: '100%', zIndex:"1" }} variant="outlined" key={project.url}>
     <CardContent sx={{ minHeight: 250, position: 'relative' }}>
       <CardCover>
         <img src={project.imageUrl} />
@@ -26,7 +26,7 @@ function ProjectCard(props: ProjectCardProps) {
             )}
           </Stack>
           <Link target='_blank' href={project.url}>
-          {/* <IconButton><ArrowTopRightOnSquareIcon height={18} color={theme.palette.text.tertiary} /></IconButton> */}
+          <IconButton><ArrowTopRightOnSquareIcon height={18} color={theme.palette.text.tertiary} /></IconButton>
           </Link>
         </Stack>
       </Stack>

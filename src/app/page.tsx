@@ -9,12 +9,12 @@ export default function Home() {
         <Stack position="relative">
           <Typography
             display={"inline"}
-            fontSize={{ xs: 36, sm: 52, md: 64 }}
+            fontSize={{ xs: 40, sm: 52, md: 64 }}
             fontFamily="Rampart One"
           >
             Hi, I am Ayush
           </Typography>
-          <Typography level="body-lg" color="neutral" fontFamily="Open Sans">
+          <Typography level="body-lg" color="neutral" fontFamily="Open Sans" fontWeight={400}>
             Full Stack Developer with good experience in web designing and
             development, producting the Quality work.
           </Typography>
@@ -35,7 +35,7 @@ export default function Home() {
           skills.map((skill,index)=>{
             return (
             <Chip key={index} sx={{
-              "--Chip-minHeight": "40px","--Chip-radius": "5px","--Chip-gap": "5px", margin:"2px",minWidth: {xs:"80px",md:"100px"}
+              "--Chip-minHeight": "40px","--Chip-radius": "5px","--Chip-gap": "5px", margin:"2px",minWidth: {xs:"80px",md:"100px"},fontFamily:"Open Sans"
 
             }} variant="outlined">{skill.name}</Chip>
             )

@@ -26,11 +26,11 @@ function NavBar() {
         display: { xs: 'none', sm: 'flex' },
         position: "fixed",
         top:0,
-
+        backgroundColor:"black",
         height: "64px",
         width:"-webkit-fill-available",
         zIndex: theme.zIndex.modal-1,
-        margin:"0 64px"
+        padding:"0 64px"
 
       }}
     >
@@ -43,7 +43,7 @@ function NavBar() {
           
         >
           <ListItemButton onClick={() => navigate.push("/")}>
-            <ListItemContent sx={{ alignItems: "center", display: "flex", textAlign:"center", filter: "brightness(0.5) grayscale(1)" }}>
+            <ListItemContent sx={{ alignItems: "center", display: "flex", textAlign:"center", filter: "brightness(1) grayscale(1)" }}>
             <Image src="/logo.ico" width={35} height={35} alt="logo"  />
             </ListItemContent>
           </ListItemButton>

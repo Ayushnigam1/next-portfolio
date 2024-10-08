@@ -9,7 +9,7 @@ interface ProjectCardProps {
 function ProjectCard(props: ProjectCardProps) {
   const { project } = props
   const theme = useTheme()
-  return <Card sx={{ padding: 0, gap: 0, height: '100%', zIndex:"1" }} variant="outlined" key={project.url}>
+  return <Card sx={{ padding: 0, gap: 0, height: '100%', zIndex:"1"}} variant="outlined" key={project.url}>
     <CardContent sx={{ minHeight: 250, position: 'relative' }}>
       <CardCover>
         <img src={project.imageUrl} />

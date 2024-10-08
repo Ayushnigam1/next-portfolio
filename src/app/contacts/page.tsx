@@ -56,6 +56,7 @@ export default function Contacts() {
             },
           }}
           fontFamily="Rampart One"
+          
         >
           Connect Me
         </Typography>
@@ -69,20 +70,27 @@ export default function Contacts() {
           }}
         >
           <Stack gap={3} direction={{ xs: "row", md: "column" }}>
-            <Sheet
-              color="primary"
-              variant="outlined"
-              sx={{
-                boxShadow: theme.shadow["xs"],
-                padding: "5px",
-                borderRadius: "10px",
-                textAlign: "center",
-                transition: "box-shadow 0.2s ease-in-out",
-                "&:hover": {
-                  boxShadow: (theme) => theme.shadow["md"],
-                },
-              }}
-            >
+          <Sheet
+      variant="outlined"
+      sx={{
+        backgroundColor: 'transparent',  
+        fontFamily:"Open Sans",
+        border: '1px solid',          
+        borderColor: '#d1d1d5', 
+        color: '#FFFFFF',    
+        cursor:"pointer",      
+        transition:"all 0.4s ease 0s",   
+        marginBottom:"30px",
+        filter: "grayscale(0)",
+        padding:"15px",
+       display:'grid',
+        '&:hover': {
+          border: '1px solid transparent', 
+          boxShadow: '0px 8px 30px rgba(118, 85, 225, 0.15)', 
+          filter:"grayscale(1)"
+        },
+      }}
+    >
               <a
                 href="https://www.instagram.com/its_ayush_nigam_?igsh=dXN1dW96MHBoNDBs"
                 target="_blank"
@@ -92,26 +100,33 @@ export default function Contacts() {
                   sx={{
                     color: "#7A3E3E",
                     fontSize: 50,
-                    transition: "font-size 0.2s ease-in-out",
-                    "&:hover": { fontSize: 52 },
+                    transition: "font-size 0.4s ease-in-out",
+                    "&:hover": { fontSize: 56 },
                   }}
                 />
               </a>
             </Sheet>
             <Sheet
-              color="primary"
-              variant="outlined"
-              sx={{
-                boxShadow: theme.shadow["xs"],
-                padding: "5px",
-                borderRadius: "10px",
-                textAlign: "center",
-                transition: "box-shadow 0.2s ease-in-out",
-                "&:hover": {
-                  boxShadow: (theme) => theme.shadow["md"],
-                },
-              }}
-            >
+      variant="outlined"
+      sx={{
+        backgroundColor: 'transparent',  
+        fontFamily:"Open Sans",
+        border: '1px solid',          
+        borderColor: '#d1d1d5', 
+        color: '#FFFFFF',    
+        cursor:"pointer",      
+        transition:"all 0.4s ease 0s",   
+        marginBottom:"30px",
+        filter: "grayscale(0)",
+        padding:"15px",
+       display:'grid',
+        '&:hover': {
+          border: '1px solid transparent', 
+          boxShadow: '0px 8px 30px rgba(118, 85, 225, 0.15)', 
+          filter:"grayscale(1)"
+        },
+      }}
+    >
               <a
                 href="https://www.linkedin.com/in/ayush-nigam-269aa4220"
                 target="_blank"
@@ -121,19 +136,26 @@ export default function Contacts() {
               </a>
             </Sheet>
             <Sheet
-              color="primary"
-              variant="outlined"
-              sx={{
-                boxShadow: theme.shadow["xs"],
-                padding: "5px",
-                borderRadius: "10px",
-                textAlign: "center",
-                transition: "box-shadow 0.2s ease-in-out",
-                "&:hover": {
-                  boxShadow: (theme) => theme.shadow["md"],
-                },
-              }}
-            >
+      variant="outlined"
+      sx={{
+        backgroundColor: 'transparent',  
+        fontFamily:"Open Sans",
+        border: '1px solid',          
+        borderColor: '#d1d1d5', 
+        color: '#FFFFFF',    
+        cursor:"pointer",      
+        transition:"all 0.4s ease 0s",   
+        marginBottom:"30px",
+        filter: "grayscale(0)",
+        padding:"15px",
+       display:'grid',
+        '&:hover': {
+          border: '1px solid transparent', 
+          boxShadow: '0px 8px 30px rgba(118, 85, 225, 0.15)', 
+          filter:"grayscale(1)"
+        },
+      }}
+    >
               <a
                 href="https://github.com/Ayushnigam1"
                 target="_blank"
@@ -143,19 +165,26 @@ export default function Contacts() {
               </a>
             </Sheet>
             <Sheet
-              color="primary"
-              variant="outlined"
-              sx={{
-                boxShadow: theme.shadow["xs"],
-                padding: "5px",
-                borderRadius: "10px",
-                textAlign: "center",
-                transition: "box-shadow 0.2s ease-in-out",
-                "&:hover": {
-                  boxShadow: (theme) => theme.shadow["md"],
-                },
-              }}
-            >
+      variant="outlined"
+      sx={{
+        backgroundColor: 'transparent',  
+        fontFamily:"Open Sans",
+        border: '1px solid',          
+        borderColor: '#d1d1d5', 
+        color: '#FFFFFF',    
+        cursor:"pointer",      
+        transition:"all 0.4s ease 0s",   
+        marginBottom:"30px",
+        filter: "grayscale(0)",
+        padding:"15px",
+       display:'grid',
+        '&:hover': {
+          border: '1px solid transparent', 
+          boxShadow: '0px 8px 30px rgba(118, 85, 225, 0.15)', 
+          filter:"grayscale(1)"
+        },
+      }}
+    >
               <a
                 href="mailto:ayush27nigam02@gmail.com"
                 target="_blank"
@@ -166,20 +195,27 @@ export default function Contacts() {
             </Sheet>
           </Stack>
           <Stack gap={3} direction={{ xs: "row", md: "column" }}>
-            <Sheet
-              color="primary"
-              variant="outlined"
-              sx={{
-                boxShadow: theme.shadow["xs"],
-                padding: "5px",
-                borderRadius: "10px",
-                textAlign: "center",
-                transition: "box-shadow 0.2s ease-in-out",
-                "&:hover": {
-                  boxShadow: (theme) => theme.shadow["md"],
-                },
-              }}
-            >
+          <Sheet
+      variant="outlined"
+      sx={{
+        backgroundColor: 'transparent',  
+        fontFamily:"Open Sans",
+        border: '1px solid',          
+        borderColor: '#d1d1d5', 
+        color: '#FFFFFF',    
+        cursor:"pointer",      
+        transition:"all 0.4s ease 0s",   
+        marginBottom:"30px",
+        filter: "grayscale(0)",
+        padding:"15px",
+       display:'grid',
+        '&:hover': {
+          border: '1px solid transparent', 
+          boxShadow: '0px 8px 30px rgba(118, 85, 225, 0.15)', 
+          filter:"grayscale(1)"
+        },
+      }}
+    >
               <a
                 href="https://www.upwork.com/freelancers/~01fb2b36856406c51c"
                 target="_blank"
@@ -189,19 +225,26 @@ export default function Contacts() {
               </a>
             </Sheet>
             <Sheet
-              color="primary"
-              variant="outlined"
-              sx={{
-                boxShadow: theme.shadow["xs"],
-                padding: "5px",
-                borderRadius: "10px",
-                textAlign: "center",
-                transition: "box-shadow 0.2s ease-in-out",
-                "&:hover": {
-                  boxShadow: (theme) => theme.shadow["md"],
-                },
-              }}
-            >
+      variant="outlined"
+      sx={{
+        backgroundColor: 'transparent',  
+        fontFamily:"Open Sans",
+        border: '1px solid',          
+        borderColor: '#d1d1d5', 
+        color: '#FFFFFF',    
+        cursor:"pointer",      
+        transition:"all 0.4s ease 0s",   
+        marginBottom:"30px",
+        filter: "grayscale(0)",
+        padding:"15px",
+       display:'grid',
+        '&:hover': {
+          border: '1px solid transparent', 
+          boxShadow: '0px 8px 30px rgba(118, 85, 225, 0.15)', 
+          filter:"grayscale(1)"
+        },
+      }}
+    >
               <a
                 href="https://leetcode.com/u/ayush_nigam_1/"
                 target="_blank"
@@ -211,19 +254,26 @@ export default function Contacts() {
               </a>
             </Sheet>
             <Sheet
-              color="primary"
-              variant="outlined"
-              sx={{
-                boxShadow: theme.shadow["xs"],
-                padding: "5px",
-                borderRadius: "10px",
-                textAlign: "center",
-                transition: "box-shadow 0.2s ease-in-out",
-                "&:hover": {
-                  boxShadow: (theme) => theme.shadow["md"],
-                },
-              }}
-            >
+      variant="outlined"
+      sx={{
+        backgroundColor: 'transparent',  
+        fontFamily:"Open Sans",
+        border: '1px solid',          
+        borderColor: '#d1d1d5', 
+        color: '#FFFFFF',    
+        cursor:"pointer",      
+        transition:"all 0.4s ease 0s",   
+        marginBottom:"30px",
+        filter: "grayscale(0)",
+        padding:"15px",
+       display:'grid',
+        '&:hover': {
+          border: '1px solid transparent', 
+          boxShadow: '0px 8px 30px rgba(118, 85, 225, 0.15)', 
+          filter:"grayscale(1)"
+        },
+      }}
+    >
               <a
                 href="https://www.geeksforgeeks.org/user/ayush27nigam02/"
                 target="_blank"
@@ -233,19 +283,26 @@ export default function Contacts() {
               </a>
             </Sheet>
             <Sheet
-              color="primary"
-              variant="outlined"
-              sx={{
-                boxShadow: theme.shadow["xs"],
-                padding: "5px",
-                borderRadius: "10px",
-                textAlign: "center",
-                transition: "box-shadow 0.2s ease-in-out",
-                "&:hover": {
-                  boxShadow: (theme) => theme.shadow["md"],
-                },
-              }}
-            >
+      variant="outlined"
+      sx={{
+        backgroundColor: 'transparent',  
+        fontFamily:"Open Sans",
+        border: '1px solid',          
+        borderColor: '#d1d1d5', 
+        color: '#FFFFFF',    
+        cursor:"pointer",      
+        transition:"all 0.4s ease 0s",   
+        marginBottom:"30px",
+        filter: "grayscale(0)",
+        padding:"15px",
+       display:'grid',
+        '&:hover': {
+          border: '1px solid transparent', 
+          boxShadow: '0px 8px 30px rgba(118, 85, 225, 0.15)', 
+          filter:"grayscale(1)"
+        },
+      }}
+    >
               <a
                 href="https://www.naukri.com/code360/profile/Ayush_01"
                 target="_blank"

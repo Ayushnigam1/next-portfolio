@@ -11,7 +11,7 @@ export default function Home() {
           <Typography display={"inline"}
             fontSize={{ xs: 30, sm: 32, md: 44 }}
             fontFamily="Open Sans"
-            fontWeight={"bold"}> Hi, I'm . . .</Typography>
+            fontWeight={"bold"}> Hi, I am . . .</Typography>
           <Typography
             display={"inline"}
             fontSize={{ xs: 47, sm: 62, md: 74 }}

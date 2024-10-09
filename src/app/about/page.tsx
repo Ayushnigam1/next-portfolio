@@ -16,7 +16,7 @@ export default function About() {
       <Box sx={{ display:"flex",alignItems:"center", margin:{xs:"10px 20px",md:"unset"}, order: { xs: 2, sm: 2, md: 'unset' }}}>
                 <Typography level="title-sm" fontSize={16} fontFamily={"Open Sans"} textAlign={'justify'} sx={{margin:"10px"}}> 
                    Hii 👋🏻 Again, Currently, I am brushing up my problem solving skills by doing competitive programming and working on web development project.
-                    I build new projects just to tickle my brain and love guiding others. Apart from studies I also like sports where I'd love to play Table Tennis, chess and cricket.
+                    I build new projects just to tickle my brain and love guiding others. Apart from studies I also like sports where I would love to play Table Tennis, chess and cricket.
                 </Typography>
             </Box>
         <Box

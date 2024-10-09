@@ -20,8 +20,8 @@ function NavMenu() {
             >
                 <Bars2Icon height={18} />
             </IconButton>
-            <Drawer slotProps={{ content: { sx: { bgcolor: 'transparent', boxShadow: 'none', p: 1,color:'white' } } }} open={open} anchor='top' onClose={() => setOpen(o => !o)}>
-                <Sheet sx={{ border: 1, borderRadius: 'sm', borderColor: theme.palette.divider, boxShadow: theme.shadow['sm'],backgroundColor:"#7A3E3E", }}>
+            <Drawer slotProps={{ content: { sx: { bgcolor: 'transparent', boxShadow: 'none', p: 1 } } }} open={open} anchor='top' onClose={() => setOpen(o => !o)}>
+                <Sheet sx={{ border: 1, borderRadius: 'sm', borderColor: theme.palette.divider, boxShadow: theme.shadow['sm'] }}>
                     <List>
                         <ListItem sx={{ marginBottom: 2}}>
                             <ListItemContent sx={{ justifyContent: 'space-between', alignItems: 'center', display: "flex" }}>
@@ -47,7 +47,7 @@ function NavMenu() {
                                                     ...theme.typography['body-lg'],
                                                     fontFamily: "Open Sans",
                                                     lineHeight: 3,
-                                                     color:"white"
+                                                
                                                 })}
                                             >
                                                 {item.title}

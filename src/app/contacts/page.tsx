@@ -52,7 +52,7 @@ export default function Contacts() {
               },
               width: "1px",
               height: "200%",
-              backgroundColor: "#7A3E3E",
+              backgroundColor: "black",
             },
           }}
           fontFamily="Rampart One"
@@ -98,7 +98,7 @@ export default function Contacts() {
               >
                 <Instagram
                   sx={{
-                    color: "#7A3E3E",
+                    color: "black",
                     fontSize: 30,
                     transition: "font-size 0.4s ease-in-out",
                     "&:hover": { fontSize: 35 },
@@ -132,7 +132,7 @@ export default function Contacts() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon as={AiOutlineLinkedin} color="#7A3E3E" />
+                <Icon as={AiOutlineLinkedin}  color="black" />
               </a>
             </Sheet>
             <Sheet
@@ -161,7 +161,7 @@ export default function Contacts() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon as={FaGithub} color="#7A3E3E" />
+                <Icon as={FaGithub}  color="black" />
               </a>
             </Sheet>
             <Sheet
@@ -190,7 +190,7 @@ export default function Contacts() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon as={SiGmail} color="#7A3E3E" />
+                <Icon as={SiGmail}  color="black" />
               </a>
             </Sheet>
           </Stack>
@@ -221,7 +221,7 @@ export default function Contacts() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon as={FaUpwork} color="#7A3E3E" />
+                <Icon as={FaUpwork}  color="black" />
               </a>
             </Sheet>
             <Sheet
@@ -250,7 +250,7 @@ export default function Contacts() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon as={SiLeetcode} color="#7A3E3E" />
+                <Icon as={SiLeetcode}  color="black" />
               </a>
             </Sheet>
             <Sheet
@@ -279,7 +279,7 @@ export default function Contacts() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon as={SiGeeksforgeeks} color="#7A3E3E" />
+                <Icon as={SiGeeksforgeeks}  color="black" />
               </a>
             </Sheet>
             <Sheet
@@ -308,7 +308,7 @@ export default function Contacts() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon as={SiCodingninjas} color="#7A3E3E" />
+                <Icon as={SiCodingninjas}  color="black" />
               </a>
             </Sheet>
           </Stack>

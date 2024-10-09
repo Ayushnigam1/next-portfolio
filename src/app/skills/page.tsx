@@ -1,7 +1,6 @@
 
 import Skillgrid from "@/components/Skillgrid";
 import { Grid, Sheet, Stack, Typography } from "@mui/joy";
-import Image from "next/image";
 
 
 export default async function Skills() {

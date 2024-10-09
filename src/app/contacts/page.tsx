@@ -12,10 +12,10 @@ import {
 } from "react-icons/si";
 
 const Icon = styled("div")(({ theme }) => ({
-  fontSize: "50px",
+  fontSize: "30px",
   transition: "font-size 0.2s ease-in-out",
   "&:hover": {
-    fontSize: "52px",
+    fontSize: "35px",
   },
 }));
 export default function Contacts() {
@@ -58,7 +58,7 @@ export default function Contacts() {
           fontFamily="Rampart One"
           
         >
-          Connect Me
+          Contact Me
         </Typography>
 
         <Stack
@@ -80,9 +80,9 @@ export default function Contacts() {
         color: '#FFFFFF',    
         cursor:"pointer",      
         transition:"all 0.4s ease 0s",   
-        marginBottom:"30px",
+        marginBottom:"20px",
         filter: "grayscale(0)",
-        padding:"15px",
+        padding:"10px",
        display:'grid',
         '&:hover': {
           border: '1px solid transparent', 
@@ -99,9 +99,9 @@ export default function Contacts() {
                 <Instagram
                   sx={{
                     color: "#7A3E3E",
-                    fontSize: 50,
+                    fontSize: 30,
                     transition: "font-size 0.4s ease-in-out",
-                    "&:hover": { fontSize: 56 },
+                    "&:hover": { fontSize: 35 },
                   }}
                 />
               </a>
@@ -116,9 +116,9 @@ export default function Contacts() {
         color: '#FFFFFF',    
         cursor:"pointer",      
         transition:"all 0.4s ease 0s",   
-        marginBottom:"30px",
+        marginBottom:"20px",
         filter: "grayscale(0)",
-        padding:"15px",
+        padding:"10px",
        display:'grid',
         '&:hover': {
           border: '1px solid transparent', 
@@ -145,9 +145,9 @@ export default function Contacts() {
         color: '#FFFFFF',    
         cursor:"pointer",      
         transition:"all 0.4s ease 0s",   
-        marginBottom:"30px",
+        marginBottom:"20px",
         filter: "grayscale(0)",
-        padding:"15px",
+        padding:"10px",
        display:'grid',
         '&:hover': {
           border: '1px solid transparent', 
@@ -174,9 +174,9 @@ export default function Contacts() {
         color: '#FFFFFF',    
         cursor:"pointer",      
         transition:"all 0.4s ease 0s",   
-        marginBottom:"30px",
+        marginBottom:"20px",
         filter: "grayscale(0)",
-        padding:"15px",
+        padding:"10px",
        display:'grid',
         '&:hover': {
           border: '1px solid transparent', 
@@ -205,9 +205,9 @@ export default function Contacts() {
         color: '#FFFFFF',    
         cursor:"pointer",      
         transition:"all 0.4s ease 0s",   
-        marginBottom:"30px",
+        marginBottom:"20px",
         filter: "grayscale(0)",
-        padding:"15px",
+        padding:"10px",
        display:'grid',
         '&:hover': {
           border: '1px solid transparent', 
@@ -234,9 +234,9 @@ export default function Contacts() {
         color: '#FFFFFF',    
         cursor:"pointer",      
         transition:"all 0.4s ease 0s",   
-        marginBottom:"30px",
+        marginBottom:"20px",
         filter: "grayscale(0)",
-        padding:"15px",
+        padding:"10px",
        display:'grid',
         '&:hover': {
           border: '1px solid transparent', 
@@ -263,9 +263,9 @@ export default function Contacts() {
         color: '#FFFFFF',    
         cursor:"pointer",      
         transition:"all 0.4s ease 0s",   
-        marginBottom:"30px",
+        marginBottom:"20px",
         filter: "grayscale(0)",
-        padding:"15px",
+        padding:"10px",
        display:'grid',
         '&:hover': {
           border: '1px solid transparent', 
@@ -292,9 +292,9 @@ export default function Contacts() {
         color: '#FFFFFF',    
         cursor:"pointer",      
         transition:"all 0.4s ease 0s",   
-        marginBottom:"30px",
+        marginBottom:"20px",
         filter: "grayscale(0)",
-        padding:"15px",
+        padding:"10px",
        display:'grid',
         '&:hover': {
           border: '1px solid transparent', 

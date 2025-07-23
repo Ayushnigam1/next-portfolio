@@ -4,7 +4,7 @@ export const getGraphQL = () => {
     const apolloLink = new ApolloLink((operation, forward) => {
         operation.setContext({
         headers: {
-            "Authorization": `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`
+            "Authorization": `Bearer ${process.env.GITHUB_TOKEN}`
         }})
         return forward(operation)
     })

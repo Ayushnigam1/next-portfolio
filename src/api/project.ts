@@ -36,18 +36,35 @@ export async function getProjects() {
       }
     }
   `
+  const nodes = await getGraphQL().query({ 
+    query: GET_PROJECTS,
+    fetchPolicy: "network-only",
+  });
+  
+  const allRepos = nodes.data.user.repositories.edges.map((edge: any) => edge.node);
 
-  const nodes = await getGraphQL().query({ query: GET_PROJECTS })
- console.log("node",nodes)
-  const projects: Project[] = nodes.data.user.repositories.edges.map(({node}: any) => ({
-    name: node.name,
-    description: node.description,
-    url: node.url,
-    homepage: node.homepageUrl,
-    imageUrl: node.openGraphImageUrl,
-    languages: node.languages.edges.map(({node}: any) => node.name),
-    topics: node.repositoryTopics.edges.map(({ node }: any) => node.topic.name)
-  }))
+  // Filter for only those with the 'portfolio' topic
+  const portfolioRepos = allRepos.filter((repo: any) =>
+    repo.repositoryTopics.edges.some(
+      (topicEdge: any) => topicEdge.node.topic.name.toLowerCase() === 'portfolio'
+    )
+  );
 
-  return projects
+  allRepos.map((repo:any)=> console.log(repo))
+  // Map the filtered repos to your Project type
+  const projects: Project[] = portfolioRepos.map((repo: any) => ({
+    name: repo.name,
+    description: repo.description,
+    website:repo.website,
+    url: repo.url,
+    homepage: repo.homepageUrl,
+    imageUrl: repo.openGraphImageUrl,
+    languages: repo.languages.edges.map(({ node: langNode }: any) => langNode.name),
+    topics : repo.repositoryTopics.edges
+    .map(({ node: topicNode }: any) => topicNode.topic.name)
+    .filter((topicName: string) => topicName.toLowerCase() !== 'portfolio')
+  }));
+
+  return projects;
+
 }

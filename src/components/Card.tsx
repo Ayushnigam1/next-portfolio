@@ -1,37 +1,133 @@
 import { Project } from "@/types/Projects";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/16/solid";
-import { Card, CardActions, CardContent, CardCover, Chip, IconButton, Stack, Typography, useTheme } from "@mui/joy";
+import { Github } from "lucide-react";
+import {
+  Box,
+  Card,
+  CardActions,
+  CardContent,
+  Chip,
+  IconButton,
+  Stack,
+  Typography,
+  useTheme,
+} from "@mui/joy";
 import Link from "next/link";
 
 interface ProjectCardProps {
   project: Project;
 }
-function ProjectCard(props: ProjectCardProps) {
-  const { project } = props
-  const theme = useTheme()
-  return <Card sx={{ padding: 0, gap: 0, height: '100%', zIndex:"1"}} variant="outlined" key={project.url}>
-    <CardContent sx={{ minHeight: 250, position: 'relative' }}>
-      <CardCover>
-        <img src={project.imageUrl} />
-      </CardCover>
-    </CardContent>
-    <CardActions sx={{ padding: 2 }}>
-      <Stack justifyContent={'end'} width={'100%'} fontFamily={"Open Sans"}>
-        <Typography level='title-lg' textTransform={'capitalize'} fontFamily={"Open Sans"} fontSize={24}>{project.name}</Typography>
-        <Typography level='body-sm' textTransform={'capitalize'} fontFamily={"Open Sans"}>{project.description}</Typography>
-        <Stack width='100%' direction='row' justifyContent='space-between' alignItems='start' marginTop={1}>
-          <Stack direction='row' fontFamily={"Open Sans"} gap={1}>
-            {project.topics.filter(t => t !== 'showcase').map(topic =>
-              <Chip key={topic}  size='sm'>{topic}</Chip>
-            )}
-          </Stack>
-          <Link target='_blank' href={project.url}>
-          <IconButton><ArrowTopRightOnSquareIcon height={18} color={theme.palette.text.tertiary} /></IconButton>
-          </Link>
+
+function ProjectCard({ project }: ProjectCardProps) {
+  const theme = useTheme();
+
+  return (
+    <Card
+      variant="outlined"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        borderRadius: "lg",
+        boxShadow: "lg",
+        transition: "0.3s",
+        overflow: "hidden",
+        height: 450, 
+        "&:hover": {
+          transform: "translateY(-3px)",
+          boxShadow: "xl",
+        },
+      }}
+    >
+      <Box
+        component="img"
+        src={project.imageUrl}
+        alt={project.name}
+        sx={{
+          width: "100%",
+          height: 180,
+          objectFit: "cover",
+          borderBottom: "1px solid rgba(255,255,255,0.05)",
+        }}
+      />
+
+      <CardContent sx={{ p: 3,flex: "1 1 auto" }}>
+        <Typography
+          level="title-lg"
+          fontSize="1.25rem"
+          fontWeight={600}
+          mb={0.5}
+          sx={{
+            color: theme.palette.text.primary,
+            fontFamily: "Open Sans",
+            textTransform: "capitalize",
+          }}
+        >
+          {project.name}
+        </Typography>
+
+        <Typography
+          level="body-sm"
+          sx={{
+            color: theme.palette.text.secondary,
+            fontFamily: "Open Sans",
+            textTransform: "capitalize",
+            minHeight: 70,
+            maxHeight: 70,
+            overflowY: "auto",
+            scrollbarWidth: "thin",
+            "&::-webkit-scrollbar": {
+              width: "2px",
+            },
+            "&::-webkit-scrollbar-thumb": {
+              backgroundColor: "rgba(255, 255, 255, 0.2)",
+              borderRadius: "2px",
+            },
+          }}
+        >
+          {project.description}
+        </Typography>
+
+        <Stack
+          direction="row"
+          flexWrap="wrap"
+          gap={1}
+          mt={2}
+          alignItems="center"
+        >
+          {project.topics
+            .filter((t) => t !== "showcase")
+            .map((topic) => (
+              <Chip
+                key={topic}
+                variant="soft"
+                color="neutral"
+                size="sm"
+                sx={{ fontFamily: "Open Sans", textTransform: "capitalize" }}
+              >
+                {topic}
+              </Chip>
+            ))}
         </Stack>
-      </Stack>
-    </CardActions>
-  </Card>
+      </CardContent>
+
+      <CardActions sx={{ px: 3, pb: 2,  justifyContent: "space-between", flexShrink: 0  }}>
+        <Stack direction="row" gap={1}>
+          <Link href={project.url} target="_blank">
+            <IconButton variant="outlined" color="neutral" size="sm">
+              <Github size={16} />
+            </IconButton>
+          </Link>
+          {project.homepage && (
+            <Link href={project.homepage} target="_blank">
+              <IconButton variant="outlined" color="neutral" size="sm">
+                <ArrowTopRightOnSquareIcon height={16} />
+              </IconButton>
+            </Link>
+          )}
+        </Stack>
+      </CardActions>
+    </Card>
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;

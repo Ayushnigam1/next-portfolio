@@ -14,7 +14,7 @@ function NavMenu() {
     return (
         <>
             <IconButton
-                sx={{ position: 'fixed', top: '1rem', left: '1rem', zIndex: theme.zIndex.modal - 1, display: { sm: 'none' } }}
+                sx={{ position: 'fixed', top: '1rem', left: '1rem', zIndex: 99, display: { sm: 'none' } }}
                 onClick={() => setOpen(o => !o)}
                 color='neutral'
             >

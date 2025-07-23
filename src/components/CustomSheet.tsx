@@ -1,76 +1,73 @@
-import { Box, Sheet, Typography } from "@mui/joy"
-import Image from "next/image"
+import { Box, Sheet, Typography } from "@mui/joy";
+import Image from "next/image";
 
-interface sheetProps{
-    url:'string',
-    name:"string"
+interface SheetProps {
+  url: string;  // corrected types
+  name: string;
 }
-function CustomSheet(props:sheetProps){
-    return (
-        <>
-        <Sheet
+
+function CustomSheet({ url, name }: SheetProps) {
+  return (
+    <Sheet
       variant="outlined"
       sx={{
-        backgroundColor: 'transparent',  
-        fontFamily:"Open Sans",
-        border: '1px solid',          
-        borderColor: '#d1d1d5', 
-        color: '#FFFFFF',    
-        width:{xs:"100px",sm:"150px"},
-        height:{xs:"70px",sm:"100px"},
-        cursor:"pointer",      
-        transition:"all 0.4s ease 0s",   
-        marginBottom:"30px",
-        filter: "grayscale(0)",
-        padding:"15px",
-       display:'grid',
-        '&:hover': {
-          border: '1px solid transparent', 
-          boxShadow: '0px 8px 30px rgba(118, 85, 225, 0.15)', 
-          filter:"grayscale(1)",
-
-          '& .hover-text': {
-            opacity: 1,            
-            visibility: 'visible',
-            transform: 'scale(1.5)',  
+        width: { xs: 100, sm: 140 },
+        height: { xs: 90, sm: 120 },
+        borderRadius: "lg",
+        border: "1px solid",
+        borderColor: "#d1d1d5",
+        backgroundColor: "rgba(255,255,255,0.05)",
+        backdropFilter: "blur(6px)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        position: "relative",
+        transition: "all 0.3s ease-in-out",
+        overflow: "hidden",
+        cursor: "pointer",
+        "&:hover": {
+          boxShadow: "0px 8px 30px rgba(118, 85, 225, 0.15)",
+          borderColor: "transparent",
+          "& .hover-text": {
+            opacity: 1,
+            visibility: "visible",
+            transform: "translateY(0)",
           },
         },
       }}
     >
-          <Box
-      sx={{
-        width: { xs: 50, sm: 70 },   
-        height: { xs: 60, sm: 90 },   
-        position: 'relative', 
-        alignSelf:"center",
-        justifySelf:"center",  
-        display:'grid'    
-      }}
-    >
-    <Image src={props.url} alt={props.name} layout="fill"  
-        objectFit="contain"  />
-        <Typography  className="hover-text"
-      sx={{
-        opacity: 0,       
-        visibility: 'hidden',  
-        transition: 'transform 0.4s ease,opacity 0.4s ease, visibility 0.4s ease', 
-        zIndex:100,
-        position: 'absolute', 
-        top:"90%",
-        textAlign: 'center',
-         justifySelf:'center',
-        transform: 'translate(-50%, -50%) scale(0.5)',
-        fontFamily:"montserrat",
-       fontSize:"12px"
+      <Box
+        sx={{
+          width: { xs: 40, sm: 60 },
+          height: { xs: 40, sm: 60 },
+          position: "relative",
+        }}
+      >
+        <Image src={url} alt={name} layout="fill" objectFit="contain" />
+      </Box>
 
-      }}>
-        {props.name.toUpperCase()}
+      <Typography
+        className="hover-text"
+        sx={{
+          position: "absolute",
+          bottom: 8,
+          textAlign: 'center',
+          justifySelf:'center',
+          transform: "translateX(-50%) translateY(10px)",
+          opacity: 0,
+          visibility: "hidden",
+          transition: "all 0.3s ease-in-out",
+          fontSize: "11px",
+          fontWeight: 500,
+          fontFamily: "Montserrat",
+          color: "text.primary",
+          letterSpacing: 1,
+        }}
+      >
+        {name.toUpperCase()}
       </Typography>
-
-        </Box>
     </Sheet>
-        </>
-    )
-
+  );
 }
-export default CustomSheet
+
+export default CustomSheet;

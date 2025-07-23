@@ -1,32 +1,34 @@
 "use client"
 import { Card, Chip, Container, Divider, Stack, Typography} from "@mui/joy";
 import Image from 'next/image';
+
+
 export default function Home() {
+ 
   return (
     <>
       <Container
   component="section"
   sx={{
-    paddingTop: { xs: 16, md: 10 },
-    paddingBottom: 10,
-    height: "100%",
+    py: { xs: 10, sm: 12 },
+    minHeight: "100vh",
     display: "flex",
+    flexDirection: { xs: "column-reverse", sm: "row" }, // 💡 responsive layout
     alignItems: "center",
-    position: "relative", 
+    justifyContent: "space-between",
+    gap: 4,
   }}
 >
   <Stack
-    position={{ xs: "absolute", sm: "relative" }}
-    sx={{
-      bottom: { xs: 0, sm: "unset" }, 
-      left: { xs: 0, sm: "unset" },     
-      flex: 3,
-      zIndex: 1,                        
-      padding: { xs: 2, sm: "unset" },  
-    }}
+   flex={1}
+   sx={{
+     textAlign: { xs: "center", sm: "left" },
+     zIndex: 1,
+     px: { xs: 2, sm: 0 },
+   }}
   >
     <Typography
-      display={"inline"}
+    
       fontSize={{ xs: 30, sm: 32, md: 44 }}
       fontFamily="Open Sans"
       fontWeight={"bold"}
@@ -34,17 +36,17 @@ export default function Home() {
       Hi, I am . . .
     </Typography>
     <Typography
-      display={"inline"}
-      fontSize={{ xs: 47, sm: 62, md: 74 }}
-      fontFamily="Rampart One"
-    >
-      Ayush Nigam
-    </Typography>
+  fontSize={{ xs: 47, sm: 62, md: 74 }}
+  fontFamily="Rampart One"
+>
+  Ayush Nigam
+</Typography>
     <Typography
       level="body-md"
       color="neutral"
       fontFamily="Open Sans"
       fontWeight={400}
+      mt={1}
     >
       Full Stack Developer with good experience in web designing and
       development, producing the Quality work.
@@ -52,17 +54,20 @@ export default function Home() {
   </Stack>
 
   <Stack
-    display={{ xs: "block", sm: "block" }} 
-    flex={2}
-    marginLeft={2}
+   flex={1}
+       alignItems="center"
+        justifyContent="center"
     sx={{
-      position: { xs: "absolute", sm: "relative" },
-      top: { xs: "50px", sm: "unset" },    
-      right: { xs: 0, sm: "unset" },       
-      margin: { xs: 0, sm: "unset" },     
+     
+      animation: "float 2s ease-in-out infinite",
+      "@keyframes float": {
+        "0%": { transform: "translateY(0px)" },
+        "50%": { transform: "translateY(-10px)" },
+        "100%": { transform: "translateY(0px)" },
+      },     
     }}
   >
-    <Image src="/landing.png" alt="landing" width={300} height={300} />
+    <Image src="/landing.png" alt="landing" width={300} height={300} style={{ maxWidth: "100%", height: "auto" }}  />
   </Stack>
 </Container>
 

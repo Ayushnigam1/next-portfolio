@@ -19,3 +19,8 @@ export const skills:any[]=[
 
 
 ]
+
+
+export const images:any[]=[
+   { id:"87745712?s=400&v=4",url:"/hastable.jpeg"}
+]

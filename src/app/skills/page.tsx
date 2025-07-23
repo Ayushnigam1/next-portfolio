@@ -1,19 +1,40 @@
+"use client";
+import { Stack, Typography, Box } from "@mui/joy";
+import Skillgrid from "../../components/Skillgrid";
 
-import Skillgrid from "@/components/Skillgrid";
-import { Grid, Sheet, Stack, Typography } from "@mui/joy";
+export default function Skills() {
+  return (
+    <Box
+      sx={{
+        width: "100%",
+        py: { xs: 8, md: 12 },
+        background: "linear-gradient(to bottom, #f0f0f3, #ffffff)",
+        minHeight: "80vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Stack
+        spacing={6}
+        alignItems="center"
+        width="100%"
+        maxWidth="lg"
+        px={2}
+      >
+        <Typography
+          fontSize={{ xs: 40, sm: 52, md: 64 }}
+          fontFamily="Rampart One"
+          sx={{
+           
+            textAlign: "center",
+          }}
+        >
+          Skills
+        </Typography>
 
-
-export default async function Skills() {
-    return (
-        <Stack display={'grid'}>
-             <Typography
-      fontSize={{ xs: 40, sm: 52, md: 64 }}
-      marginTop={{xs:16,md:14}}
-      marginBottom={11}
-      fontFamily="Rampart One"
-      justifySelf={'center'}
-    >Skills</Typography>
-    <Skillgrid/>
-    </Stack>
-    )
+        <Skillgrid />
+      </Stack>
+    </Box>
+  );
 }

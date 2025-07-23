@@ -47,24 +47,28 @@ export default function About() {
   
         {/* Image Section */}
         <Box
-          sx={{
-            width: { xs: "100%", sm: 500, md: 700 },  // Full width for xs
-            height: { xs: 150, sm: 200, md: 300 },
-            position: "relative",
-            alignSelf: "center",
-            justifySelf: "center",
-            display: "grid",
-            order: { xs: 1, sm: 1, md: 'unset' },
-            marginBottom: { xs: 4, sm: 0 }  // Add some space between boxes in xs
-          }}
-        >
-          <Image
-            src="/about.png"
-            alt="About"
-            layout="fill"
-            objectFit="contain"
-          />
-        </Box>
+  sx={{
+    width: { xs: "100%", sm: 500, md: 700 },
+    height: { xs: 150, sm: 200, md: 300 },
+    borderRadius: 4,
+    overflow: "hidden",
+    boxShadow: "md",
+    position: "relative",
+    alignSelf: "center",
+    justifySelf: "center",
+    display: "grid",
+    order: { xs: 1, md: 'unset' },
+    marginBottom: { xs: 4, sm: 0 }
+  }}
+>
+  <Image
+    src="/about.png"
+    alt="About"
+    layout="fill"
+    objectFit="contain" // makes it more immersive
+  />
+</Box>
+
       </Box>
   
       {/* Experience Section */}
@@ -78,12 +82,26 @@ export default function About() {
         }}
       >
         <Box>
-          <Typography fontSize={24} fontFamily="Open Sans" sx={{ textAlign: { xs: "center", md: "unset" }, margin: { xs: "20px 0px", md: "unset" } }}>
-            Experience
-          </Typography>
+        <Typography
+  fontSize={24}
+  fontWeight="bold"
+  sx={{
+    textAlign: { xs: "center", md: "left" },
+    borderBottom: "2px solid #ccc",
+    display: "inline-block",
+    pb: 1,
+    mb: 2,
+    color: "primary.700"
+  }}
+>
+  Experience
+</Typography>
         </Box>
-        <Stepper orientation="vertical" sx={{ "--Step-gap": "10px" }}>
-          <Step>
+        <Stepper orientation="vertical" sx={{ "--Step-gap": "20px" }}>
+  <Step
+   
+    sx={{ alignItems: "start" }}
+  >
             <div>
               <Typography level="title-md">
                 Genpact, Software Engineer
@@ -132,12 +150,24 @@ export default function About() {
         }}
       >
         <Box>
-          <Typography fontSize={24} fontFamily="Open Sans" sx={{ textAlign: { xs: "center", md: "unset" }, margin: { xs: "20px 0px", md: "unset" } }}>
-            Education
+        <Typography
+  fontSize={24}
+  fontWeight="bold"
+  sx={{
+    textAlign: { xs: "center", md: "left" },
+    borderBottom: "2px solid #ccc",
+    display: "inline-block",
+    pb: 1,
+    mb: 2,
+    color: "primary.700"
+  }}
+> Education
           </Typography>
         </Box>
-        <Stepper orientation="vertical" sx={{ "--Step-gap": "10px" }}>
-          <Step>
+        <Stepper orientation="vertical" sx={{ "--Step-gap": "20px" }}>
+  <Step
+    sx={{ alignItems: "start" }}
+  >
             <div>
               <Typography level="title-md">
                 SRIT, B.Tech Computer Science

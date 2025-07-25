@@ -215,6 +215,21 @@ export default function Home() {
           </Box>
         ))}
       </Box>
+        <Stack
+    spacing={1}
+    alignItems="center"
+ 
+    
+  >
+    <Typography level="body-md" fontWeight="md" color="neutral">
+      👀 Want a categorized view for skillset?
+    </Typography>
+    <Link href="/skills">
+      <Button size="md" variant="soft" color="neutral">
+        Explore Skill Section
+      </Button>
+    </Link>
+  </Stack>
     </Container>
 
 <Container maxWidth="lg" sx={{ mt: 12 }}>
@@ -268,15 +283,20 @@ export default function Home() {
   </Stack>
 </Container>
 
-<Box sx={{ mt: 10, px: { xs: 2, md: 6 } }}>
-  <Typography
-    fontSize={{ xs: 32, sm: 44, md: 52 }}
-    fontWeight="xl"
-    mb={4}
-    textAlign="center"
+<Box sx={{
+      py: { xs: 6, sm: 8 },
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      gap: 4,
+      textAlign: "center",
+    }}>
+ <Typography
+    level="h2"
+    fontSize={{ xs: 28, sm: 36 }}
     fontFamily="Rampart One"
   >
-    Certifications & Licenses
+    Certifications 
   </Typography>
 
 

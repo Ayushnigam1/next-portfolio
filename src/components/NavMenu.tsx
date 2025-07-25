@@ -27,7 +27,7 @@ function NavMenu() {
                             <ListItemContent sx={{ justifyContent: 'space-between', alignItems: 'center', display: "flex" }}>
                                 <Stack>
                                     <NavLink href={'/'} onClick={() => setOpen(o => !o)}>
-                                    <Image src="/logo.ico" width={30} height={30} alt="logo" />                                    </NavLink>
+                                    <Image src="/logo.ico" width={30} height={30} alt="logo" />  </NavLink>
                                     <ModalClose />
                                 </Stack>
                             </ListItemContent>

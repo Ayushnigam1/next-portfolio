@@ -303,13 +303,15 @@ export default function Home() {
   <Box
     sx={{
       display: 'flex',
+      flexDirection: 'row',
+      width: '100%',
       overflowX: 'auto',
-      scrollbarWidth: 'none',
-      '&::-webkit-scrollbar': { display: 'none' },
-      py: 2,
       scrollSnapType: 'x mandatory',
       scrollBehavior: 'smooth',
+      px: 2,
       gap: 2,
+      '&::-webkit-scrollbar': { display: 'none' }, // hide scrollbar in WebKit
+      scrollbarWidth: 'none', // hide scrollbar in Firefox
     }}
   >
     {certifications.map((cert, index) => (

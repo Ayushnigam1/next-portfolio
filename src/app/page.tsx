@@ -76,7 +76,7 @@ export default function Home() {
 
   {/* Resume Button */}
   <Link
-    href="https://drive.google.com/file/d/1J17Ea6Ht6t3Unkim6nPEdBfP2h-5aPVi/view?usp=drive_link"
+    href="https://drive.google.com/file/d/1Andrylc9nisWxaku-7_PYGBuIYP_GnsL/view?usp=drive_link"
     target="_blank"
   >
     <IconButton variant="outlined" color="neutral" size="sm">
